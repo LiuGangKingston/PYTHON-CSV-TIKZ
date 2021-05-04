@@ -20,11 +20,11 @@ import math
 from   collections import deque
 
 
-PI             = 3.14159265358979323846e0#;
-Rad2Deg        = 57.29577951308232e0     #;  // 180/pi;
-Deg2Rad        = 0.017453292519943296e0  #;  // pi/180;
-NapierConstant = 2.71828182845904523536e0#;
-EulerNumber    = 2.71828182845904523536e0#;
+PI             = 3.14159265358979323846e0             #;
+Rad2Deg        = 57.29577951308232e0                  #;  // 180/pi;
+Deg2Rad        = 0.017453292519943296e0               #;  // pi/180;
+NapierConstant = 2.71828182845904523536e0             #;
+EulerNumber    = 2.71828182845904523536e0             #;
 
 AccelerationDueToEarthGravity  = 9.80e0               #;// "m/s$^2$"
 AtomicMassConstant             = 1.66053906660e-27    #;// kg
@@ -138,8 +138,8 @@ class PythonCSVTikZFileGroup:
         self.FileNamePrefixes.append(FileNamePrefix)
 
     def FileGroupClose(self):
-        for self.i in range(self.TotalFiles):
-            ((self.GroupFiles)[self.i]).close()
+        for self.ifile in self.GroupFiles:
+            self.ifile.close()
 
     def GetFileForRow(self,RowNumber):
         if (RowNumber*self.RowNumberDirection) < 0:
