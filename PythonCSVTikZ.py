@@ -172,4 +172,9 @@ class PythonCSVTikZFileGroup:
         thefile.write('\n')
 
 
+# The end of class PythonCSVTikZFileGroup and file.
+# The end of class PythonCSVTikZFileGroup and file.
+# The end of class PythonCSVTikZFileGroup and file.
+
+
 
