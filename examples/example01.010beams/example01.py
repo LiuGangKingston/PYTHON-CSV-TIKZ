@@ -1,4 +1,4 @@
-#   This is example01.500beams.data.split source file for
+#   This is example01 source file for
 #       https://github.com/LiuGangKingston/PYTHON-CSV-TIKZ.git
 #            Version 1.0
 #   free for non-commercial use.
