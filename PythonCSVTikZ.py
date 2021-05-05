@@ -142,11 +142,12 @@ class PythonCSVTikZFileGroup:
             self.ifile.close()
 
     def GetFileForRow(self,RowNumber):
-        if (RowNumber*self.RowNumberDirection) < 0:
+        self.dis = RowNumber-self.StartingRowNumber
+        if (self.dis*self.RowNumberDirection) < 0:
             print("The RowNumber should be from "+ str(self.StartingRowNumber) + " to "+ str(self.EndingRowNumber))
             print("Stopped for bad RowNumber " + str(RowNumber) + " in GetFileForRow.")
             sys.exit()
-        if abs(RowNumber-self.StartingRowNumber) > self.AbsoluteRowRange:
+        if abs(self.dis) > self.AbsoluteRowRange:
             print("The RowNumber should be from "+ str(self.StartingRowNumber) + " to "+ str(self.EndingRowNumber))
             print("Stopped for bad RowNumber " + str(RowNumber) + " in GetFileForRow.")
             sys.exit()
