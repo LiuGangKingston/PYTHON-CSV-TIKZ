@@ -49,16 +49,16 @@ bigfile.FirstListToAllFiles(["variablenames","seperate","bycommaswithoutanything
 for i in range(startingline, totallines + 1):
     ...
 
-    # The next statement will output data into the specific file based on "i" value. 
-    bigfile.WriteAListRow( i,       [f"{onevariable}, {anothervariable}, {anothervariable}",
-              f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-              f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-              f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-              f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-              f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-              f"{anothervariable}, {PickTikZColor(i)}"])
-              #  where the function "PickTikZColor(i)" returns a TikZ color for any input integer "i", 
-              #  which can be used to add various colors to iteratively calculated drawings.
+    # The next statement will output data of variables into the specific file based on "i" value. 
+    bigfile.WriteVariableListRow( i, [onevariable,anothervariable,anothervariable,
+                  anothervariable,anothervariable,anothervariable,anothervariable,
+                  anothervariable,anothervariable,anothervariable,anothervariable,
+                  anothervariable,anothervariable,anothervariable,anothervariable,
+                  anothervariable,anothervariable,anothervariable,anothervariable,
+                  anothervariable,anothervariable,anothervariable,anothervariable,
+                  anothervariable,PickTikZColor(i)] )
+              #   where the function "PickTikZColor(i)" returns a TikZ color for any input integer "i", 
+              #   which can be used to add various colors to iteratively calculated drawings.
 
 # The next routine call will close all files in the group.
 bigfile.FileGroupClose()
