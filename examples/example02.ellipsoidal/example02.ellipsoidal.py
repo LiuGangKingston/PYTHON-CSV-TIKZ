@@ -77,10 +77,9 @@ for j in [1, -1]:
         normalangle = tangentangle - 90.0e0
         incidentangle = normalangle - startingangle
         reflectangle = tangentangle + 90.0e0 + incidentangle
-
-        bigfile.WriteAListRow(i,[f" {c}, {d}, {startingangle}, {dk}, {bigf}, {t}", 
-                  f"{x}, {y}, {yprime}, {tangentangle}, {normalangle} ",
-                  f"{incidentangle}, {reflectangle}, {PickTypicalColor(i)}"])
+        bigfile.WriteVariableListRow(i,[c, d, startingangle, dk, bigf, t, 
+                  x, y, yprime, tangentangle, normalangle,
+                  incidentangle, reflectangle, PickTypicalColor(i)])
 
 bigfile.FileGroupClose()
 
