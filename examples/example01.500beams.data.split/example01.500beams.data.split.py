@@ -76,11 +76,11 @@ for i in range(startingline, totallines + 1):
     angleced=anglece-anglede
     outangle=math.asin(math.sin(angleced*Deg2Rad) * refractiveindex)*Rad2Deg
 
-    bigfile.WriteAListRow(i,[f" {totallines}, {i}, {refractiveindex}, {bigradius}",
-                  f"{a}, {b}, {z}, {anglez}, {c}, {anglea}",
-                  f"{incidentangle}, {refractiveangle}, {anglede}, {dx}",
-                  f"{ee}, {et}, {ex}, {ey}, {anglece}, {angleced}",
-                  f"{outangle}, {PickTikZColor(i)}"])
+    bigfile.WriteVariableListRow(i,[totallines,i,refractiveindex,bigradius,
+                                    a,b,z,anglez,c,anglea,
+                                    incidentangle,refractiveangle,anglede,dx,
+                                    ee,et,ex,ey,anglece,angleced,
+                                    outangle,PickTikZColor(i)])
 
 bigfile.FileGroupClose()
 

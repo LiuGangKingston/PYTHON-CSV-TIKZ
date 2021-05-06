@@ -172,6 +172,20 @@ class PythonCSVTikZFileGroup:
         thefile.write(TheList[self.tlessone])
         thefile.write('\n')
 
+    def WriteVariableListRow(self,RowNumber,TheList):
+        self.thefile = self.GetFileForRow(RowNumber)
+        self.WriteVariablesToTheFile(self.thefile,TheList)
+
+    def WriteVariablesToTheFile(self,thefile,TheList):
+        self.totalelement = len(TheList)
+        self.tlessone = self.totalelement - 1
+        if self.tlessone > 0:
+            for self.element in range(self.tlessone):
+                thefile.write(f"{TheList[self.element]}")
+                thefile.write(',')
+        thefile.write(f"{TheList[self.tlessone]}")
+        thefile.write('\n')
+
 
 # The end of class PythonCSVTikZFileGroup and file.
 # The end of class PythonCSVTikZFileGroup and file.
