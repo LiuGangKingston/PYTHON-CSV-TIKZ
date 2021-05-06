@@ -55,14 +55,14 @@ In the separate source file PythonCSVTikZ.py, the class PythonCSVTikZFileGroup c
     for i in range(startingline, totallines + 1):
         ...
 
-        # The next statement will output data into the specific file based on "i" value. 
-        bigfile.WriteAListRow( i,       [f"{onevariable}, {anothervariable}, {anothervariable}",
-                  f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-                  f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-                  f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-                  f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-                  f"{anothervariable}, {anothervariable}, {anothervariable}, {anothervariable}",
-                  f"{anothervariable}, {PickTikZColor(i)}"])
+        # The next statement will output data of variables into the specific file based on "i" value. 
+        bigfile.WriteVariableListRow( i, [onevariable,anothervariable,anothervariable,
+                      anothervariable,anothervariable,anothervariable,anothervariable,
+                      anothervariable,anothervariable,anothervariable,anothervariable,
+                      anothervariable,anothervariable,anothervariable,anothervariable,
+                      anothervariable,anothervariable,anothervariable,anothervariable,
+                      anothervariable,anothervariable,anothervariable,anothervariable,
+                      anothervariable,PickTikZColor(i)] )
 
     # The next routine call will close all files in the group.
     bigfile.FileGroupClose()
