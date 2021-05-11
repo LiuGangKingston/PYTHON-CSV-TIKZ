@@ -121,7 +121,7 @@ class PythonCSVTikZFileGroup:
         self.EndingRowNumber = EndingRow
         self.AbsoluteRowRange = abs(EndingRow - StartingRow)
         self.RowNumberDirection = 1
-        if StartingRow > RowsInEachFile:
+        if StartingRow > EndingRow:
             self.RowNumberDirection = -1
         self.TotalFiles = abs(StartingRow - EndingRow) // RowsInEachFile + 1
 
